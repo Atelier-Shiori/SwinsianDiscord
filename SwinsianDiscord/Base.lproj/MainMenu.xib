@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
     </dependencies>
     <objects>
@@ -15,6 +16,11 @@
             <connections>
                 <outlet property="statusMenu" destination="hgY-vg-Udt" id="Eh8-Yg-wnq"/>
                 <outlet property="togglerichpresence" destination="v6S-KN-tln" id="2Nd-xt-I7L"/>
+            </connections>
+        </customObject>
+        <customObject id="Fcq-Lt-lSL" customClass="SUUpdater">
+            <connections>
+                <outlet property="delegate" destination="QFQ-nV-jdG" id="xdR-ci-sDN"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -685,6 +691,12 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="showabout:" target="Voe-Tx-rLC" id="WxA-dT-WY1"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Check for Updates…" id="QFQ-nV-jdG">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="checkForUpdates:" target="Fcq-Lt-lSL" id="LOb-YD-GTy"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="oBJ-iU-LVS"/>

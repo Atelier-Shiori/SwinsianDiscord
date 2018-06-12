@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F85BC43820D08E1E00C58BD9 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = F85BC43720D08E1E00C58BD9 /* dsa_pub.pem */; };
+		F85BC43A20D08E2C00C58BD9 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85BC43920D08E2C00C58BD9 /* Sparkle.framework */; };
+		F85BC43B20D08E7900C58BD9 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85BC43920D08E2C00C58BD9 /* Sparkle.framework */; };
+		F85BC43C20D08E7900C58BD9 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F85BC43920D08E2C00C58BD9 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F85D493F20D078D800343699 /* DiscordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F85D493D20D078D700343699 /* DiscordManager.m */; };
 		F85D494620D0838300343699 /* PFAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F85D494420D0837E00343699 /* PFAboutWindowController.m */; };
 		F85D494820D0838700343699 /* PFAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85D494720D0838600343699 /* PFAboutWindow.xib */; };
@@ -29,6 +33,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F85D495020D085EE00343699 /* DiscordRPC.framework in Embed Frameworks */,
+				F85BC43C20D08E7900C58BD9 /* Sparkle.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,6 +41,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F85BC43720D08E1E00C58BD9 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		F85BC43920D08E2C00C58BD9 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		F85D493D20D078D700343699 /* DiscordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscordManager.m; sourceTree = "<group>"; };
 		F85D493E20D078D800343699 /* DiscordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscordManager.h; sourceTree = "<group>"; };
 		F85D494320D07F8800343699 /* SwinsainDiscord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwinsainDiscord.entitlements; sourceTree = "<group>"; };
@@ -61,7 +68,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F85D494E20D085E600343699 /* DiscordRPC.framework in Frameworks */,
+				F85BC43A20D08E2C00C58BD9 /* Sparkle.framework in Frameworks */,
 				F85D494F20D085EE00343699 /* DiscordRPC.framework in Frameworks */,
+				F85BC43B20D08E7900C58BD9 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +105,8 @@
 				F87417FD20D0750700614654 /* Assets.xcassets */,
 				F85D494D20D085E600343699 /* DiscordRPC.framework */,
 				F87417FF20D0750700614654 /* MainMenu.xib */,
+				F85BC43720D08E1E00C58BD9 /* dsa_pub.pem */,
+				F85BC43920D08E2C00C58BD9 /* Sparkle.framework */,
 				F85D493E20D078D800343699 /* DiscordManager.h */,
 				F85D493D20D078D700343699 /* DiscordManager.m */,
 				F874180220D0750700614654 /* Info.plist */,
@@ -172,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F85D494C20D0851600343699 /* EULA.rtf in Resources */,
+				F85BC43820D08E1E00C58BD9 /* dsa_pub.pem in Resources */,
 				F87417FE20D0750700614654 /* Assets.xcassets in Resources */,
 				F85D494820D0838700343699 /* PFAboutWindow.xib in Resources */,
 				F874180120D0750700614654 /* MainMenu.xib in Resources */,
