@@ -7,14 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F85D493F20D078D800343699 /* DiscordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F85D493D20D078D700343699 /* DiscordManager.m */; };
+		F85D494620D0838300343699 /* PFAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F85D494420D0837E00343699 /* PFAboutWindowController.m */; };
+		F85D494820D0838700343699 /* PFAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85D494720D0838600343699 /* PFAboutWindow.xib */; };
+		F85D494A20D083CD00343699 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F85D494920D083CD00343699 /* Credits.rtf */; };
+		F85D494C20D0851600343699 /* EULA.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F85D494B20D0851600343699 /* EULA.rtf */; };
+		F85D494E20D085E600343699 /* DiscordRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85D494D20D085E600343699 /* DiscordRPC.framework */; };
+		F85D494F20D085EE00343699 /* DiscordRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85D494D20D085E600343699 /* DiscordRPC.framework */; };
+		F85D495020D085EE00343699 /* DiscordRPC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F85D494D20D085E600343699 /* DiscordRPC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F87417FC20D0750700614654 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F87417FB20D0750700614654 /* AppDelegate.m */; };
 		F87417FE20D0750700614654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87417FD20D0750700614654 /* Assets.xcassets */; };
 		F874180120D0750700614654 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87417FF20D0750700614654 /* MainMenu.xib */; };
 		F874180420D0750700614654 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F874180320D0750700614654 /* main.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F85D494220D07BE800343699 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F85D495020D085EE00343699 /* DiscordRPC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		F87417F720D0750700614654 /* iTunesDiscord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesDiscord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85D493D20D078D700343699 /* DiscordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscordManager.m; sourceTree = "<group>"; };
+		F85D493E20D078D800343699 /* DiscordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscordManager.h; sourceTree = "<group>"; };
+		F85D494320D07F8800343699 /* SwinsainDiscord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwinsainDiscord.entitlements; sourceTree = "<group>"; };
+		F85D494420D0837E00343699 /* PFAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFAboutWindowController.m; sourceTree = "<group>"; };
+		F85D494520D0838000343699 /* PFAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFAboutWindowController.h; sourceTree = "<group>"; };
+		F85D494720D0838600343699 /* PFAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PFAboutWindow.xib; path = SwinsianDiscord/PFAboutWindow.xib; sourceTree = SOURCE_ROOT; };
+		F85D494920D083CD00343699 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		F85D494B20D0851600343699 /* EULA.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = EULA.rtf; sourceTree = "<group>"; };
+		F85D494D20D085E600343699 /* DiscordRPC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DiscordRPC.framework; sourceTree = "<group>"; };
+		F87417F720D0750700614654 /* SwinsianDiscord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwinsianDiscord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87417FA20D0750700614654 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F87417FB20D0750700614654 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F87417FD20D0750700614654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85D494E20D085E600343699 /* DiscordRPC.framework in Frameworks */,
+				F85D494F20D085EE00343699 /* DiscordRPC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,7 +71,8 @@
 		F87417EE20D0750700614654 = {
 			isa = PBXGroup;
 			children = (
-				F87417F920D0750700614654 /* iTunesDiscord */,
+				F85D494320D07F8800343699 /* SwinsainDiscord.entitlements */,
+				F87417F920D0750700614654 /* SwinsianDiscord */,
 				F87417F820D0750700614654 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,43 +80,52 @@
 		F87417F820D0750700614654 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F87417F720D0750700614654 /* iTunesDiscord.app */,
+				F87417F720D0750700614654 /* SwinsianDiscord.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F87417F920D0750700614654 /* iTunesDiscord */ = {
+		F87417F920D0750700614654 /* SwinsianDiscord */ = {
 			isa = PBXGroup;
 			children = (
+				F85D494720D0838600343699 /* PFAboutWindow.xib */,
+				F85D494520D0838000343699 /* PFAboutWindowController.h */,
+				F85D494420D0837E00343699 /* PFAboutWindowController.m */,
 				F87417FA20D0750700614654 /* AppDelegate.h */,
 				F87417FB20D0750700614654 /* AppDelegate.m */,
 				F87417FD20D0750700614654 /* Assets.xcassets */,
+				F85D494D20D085E600343699 /* DiscordRPC.framework */,
 				F87417FF20D0750700614654 /* MainMenu.xib */,
+				F85D493E20D078D800343699 /* DiscordManager.h */,
+				F85D493D20D078D700343699 /* DiscordManager.m */,
 				F874180220D0750700614654 /* Info.plist */,
 				F874180320D0750700614654 /* main.m */,
+				F85D494B20D0851600343699 /* EULA.rtf */,
 				F874180520D0750700614654 /* iTunesDiscord.entitlements */,
+				F85D494920D083CD00343699 /* Credits.rtf */,
 			);
-			path = iTunesDiscord;
+			path = SwinsianDiscord;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F87417F620D0750700614654 /* iTunesDiscord */ = {
+		F87417F620D0750700614654 /* SwinsianDiscord */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F874180820D0750700614654 /* Build configuration list for PBXNativeTarget "iTunesDiscord" */;
+			buildConfigurationList = F874180820D0750700614654 /* Build configuration list for PBXNativeTarget "SwinsianDiscord" */;
 			buildPhases = (
 				F87417F320D0750700614654 /* Sources */,
 				F87417F420D0750700614654 /* Frameworks */,
 				F87417F520D0750700614654 /* Resources */,
+				F85D494220D07BE800343699 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = iTunesDiscord;
+			name = SwinsianDiscord;
 			productName = iTunesDiscord;
-			productReference = F87417F720D0750700614654 /* iTunesDiscord.app */;
+			productReference = F87417F720D0750700614654 /* SwinsianDiscord.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -97,10 +140,15 @@
 					F87417F620D0750700614654 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = F87417F220D0750700614654 /* Build configuration list for PBXProject "iTunesDiscord" */;
+			buildConfigurationList = F87417F220D0750700614654 /* Build configuration list for PBXProject "SwinsianDiscord" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F87417F620D0750700614654 /* iTunesDiscord */,
+				F87417F620D0750700614654 /* SwinsianDiscord */,
 			);
 		};
 /* End PBXProject section */
@@ -123,8 +171,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85D494C20D0851600343699 /* EULA.rtf in Resources */,
 				F87417FE20D0750700614654 /* Assets.xcassets in Resources */,
+				F85D494820D0838700343699 /* PFAboutWindow.xib in Resources */,
 				F874180120D0750700614654 /* MainMenu.xib in Resources */,
+				F85D494A20D083CD00343699 /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +187,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F874180420D0750700614654 /* main.m in Sources */,
+				F85D494620D0838300343699 /* PFAboutWindowController.m in Sources */,
 				F87417FC20D0750700614654 /* AppDelegate.m in Sources */,
+				F85D493F20D078D800343699 /* DiscordManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -251,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -261,11 +314,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = iTunesDiscord/iTunesDiscord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9HDZTER525;
-				INFOPLIST_FILE = iTunesDiscord/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iTunesDiscord",
+					"$(PROJECT_DIR)/SwinsianDiscord",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SwinsianDiscord/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pro.moyit.iTunesDiscord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,11 +333,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = iTunesDiscord/iTunesDiscord.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9HDZTER525;
-				INFOPLIST_FILE = iTunesDiscord/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iTunesDiscord",
+					"$(PROJECT_DIR)/SwinsianDiscord",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/SwinsianDiscord/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pro.moyit.iTunesDiscord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,7 +351,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F87417F220D0750700614654 /* Build configuration list for PBXProject "iTunesDiscord" */ = {
+		F87417F220D0750700614654 /* Build configuration list for PBXProject "SwinsianDiscord" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F874180620D0750700614654 /* Debug */,
@@ -299,7 +360,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F874180820D0750700614654 /* Build configuration list for PBXNativeTarget "iTunesDiscord" */ = {
+		F874180820D0750700614654 /* Build configuration list for PBXNativeTarget "SwinsianDiscord" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F874180920D0750700614654 /* Debug */,
