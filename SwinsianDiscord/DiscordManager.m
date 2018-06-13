@@ -52,7 +52,7 @@ static void handleDiscordError(int errcode, const char* message)
         DiscordRichPresence discordPresence;
         discordPresence.state = state.UTF8String;
         discordPresence.details = details.UTF8String;
-        discordPresence.startTimestamp = 0;
+        discordPresence.startTimestamp = 3600;
         discordPresence.largeImageKey = "default";
         discordPresence.smallImageKey = "default";
         discordPresence.largeImageText = "";
