@@ -46,7 +46,7 @@ static void handleDiscordError(int errcode, const char* message)
     _discordrpcrunning = false;
 }
 
-- (void)UpdatePresence:(NSString *)state withDetails:(NSString *)details {
+- (void)UpdatePresence:(NSString *)state withDetails:(NSString *)details withLargeImage:(NSString *)largeimage {
     if ([self checkDiscordRunning]) {
         Discord_ClearPresence();
         DiscordRichPresence discordPresence;
@@ -54,7 +54,7 @@ static void handleDiscordError(int errcode, const char* message)
         discordPresence.details = details.UTF8String;
         discordPresence.startTimestamp = [NSDate date].timeIntervalSince1970;
         discordPresence.endTimestamp = [NSDate dateWithTimeIntervalSinceNow:86400].timeIntervalSince1970;
-        discordPresence.largeImageKey = "default";
+        discordPresence.largeImageKey = largeimage.UTF8String;
         discordPresence.smallImageKey = "default";
         discordPresence.largeImageText = "";
         discordPresence.smallImageText = "";

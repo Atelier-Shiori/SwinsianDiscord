@@ -1,9 +1,9 @@
 # SwinsianDiscord
 ![screnshot](https://i.imgur.com/8CS4PSL.png)
 
-SwinsianDiscord is a simple menubar app for macOS that allows you to share what you are playing in Swinsian in Discord via Rich Presence. [Swinsian](https://swinsian.com) is a Advanced Music Player for Mac.
+SwinsianDiscord is a simple menubar app for macOS that allows you to share what you are playing in Swinsian or iTunes in Discord via Rich Presence. [Swinsian](https://swinsian.com) is a Advanced Music Player for Mac.
 
-This program works on macOS El Capitan or later and requires Swinsian version >= 1.8.8 to work.
+This program works on macOS El Capitan or later and requires Swinsian version >= 1.8.8 or Apple iTunes to work.
 
 The logo and the program name, Swinsian is owned by the respective owners.
 
@@ -12,5 +12,7 @@ The logo and the program name, Swinsian is owned by the respective owners.
 2. Click the note icon and click Enable Rich Presence.
 
 Note: You can automatically set SwinsianDiscord to enable Rich Presence automatically by enabling the Start Rich Presence at Startup.
+
+Depending on what music player you are using, it will show the large icon where music is playing. Do not use Swinsian and iTunes at the same time.
 
 SwinsianDiscord is licensed under BSD License.

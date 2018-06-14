@@ -11,6 +11,6 @@
 @property (getter=getStarted) bool discordrpcrunning;
 - (void)startDiscordRPC;
 - (void)shutdownDiscordRPC;
-- (void)UpdatePresence:(NSString *)state withDetails:(NSString *)details;
+- (void)UpdatePresence:(NSString *)state withDetails:(NSString *)details withLargeImage:(NSString *)largeimage;
 - (void)removePresence;
 @end

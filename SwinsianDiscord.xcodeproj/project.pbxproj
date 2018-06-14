@@ -23,6 +23,7 @@
 		F87417FE20D0750700614654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87417FD20D0750700614654 /* Assets.xcassets */; };
 		F874180120D0750700614654 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87417FF20D0750700614654 /* MainMenu.xib */; };
 		F874180420D0750700614654 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F874180320D0750700614654 /* main.m */; };
+		F8EC907E20D30DA90086F719 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EC907D20D30DA90086F719 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +61,8 @@
 		F874180220D0750700614654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F874180320D0750700614654 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F874180520D0750700614654 /* iTunesDiscord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iTunesDiscord.entitlements; sourceTree = "<group>"; };
+		F8EC907C20D30DA80086F719 /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMoveApplication.h; sourceTree = "<group>"; };
+		F8EC907D20D30DA90086F719 /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				F85BC43920D08E2C00C58BD9 /* Sparkle.framework */,
 				F85D493E20D078D800343699 /* DiscordManager.h */,
 				F85D493D20D078D700343699 /* DiscordManager.m */,
+				F8EC907C20D30DA80086F719 /* PFMoveApplication.h */,
+				F8EC907D20D30DA90086F719 /* PFMoveApplication.m */,
 				F874180220D0750700614654 /* Info.plist */,
 				F874180320D0750700614654 /* main.m */,
 				F85D494B20D0851600343699 /* EULA.rtf */,
@@ -200,6 +205,7 @@
 			files = (
 				F874180420D0750700614654 /* main.m in Sources */,
 				F85D494620D0838300343699 /* PFAboutWindowController.m in Sources */,
+				F8EC907E20D30DA90086F719 /* PFMoveApplication.m in Sources */,
 				F87417FC20D0750700614654 /* AppDelegate.m in Sources */,
 				F85D493F20D078D800343699 /* DiscordManager.m in Sources */,
 			);

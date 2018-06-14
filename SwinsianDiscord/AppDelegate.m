@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "DiscordManager.h"
 #import "PFAboutWindowController.h"
+#import "PFMoveApplication.h"
 
 @interface AppDelegate ()
 @property (weak) IBOutlet NSMenuItem *togglerichpresence;
@@ -59,6 +60,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    PFMoveToApplicationsFolderIfNecessary();
     self.dm = [DiscordManager new];
     if ([NSUserDefaults.standardUserDefaults boolForKey:@"startrichpresence"]) {
         [_dm startDiscordRPC];
@@ -80,11 +82,17 @@
                selector: @selector(trackStopped:)
                    name: @"com.swinsian.Swinsian-Track-Stopped"
                  object: nil];
+    
+    [center addObserver:self
+               selector:@selector(playerInfoChanged:)
+                   name:@"com.apple.iTunes.playerInfo"
+                 object:nil];
 }
 
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+    [_dm shutdownDiscordRPC];
 }
 
 - (IBAction)showabout:(id)sender {
@@ -118,19 +126,43 @@
 - (void)trackPlaying:(NSNotification *)myNotification {
     if (_dm.getStarted) {
         NSDictionary *userInfo = myNotification.userInfo;
-        [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",userInfo[@"artist"],userInfo[@"album"]] withDetails:userInfo[@"title"]];
+        [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",userInfo[@"artist"],userInfo[@"album"]] withDetails:userInfo[@"title"] withLargeImage:@"swinsian"];
     }
     
 }
 - (void)trackPaused:(NSNotification *)myNotification {
     if (_dm.getStarted) {
         NSDictionary *userInfo = myNotification.userInfo;
-        [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n-  %@",userInfo[@"artist"],userInfo[@"album"]] withDetails:userInfo[@"title"]];
+        [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n-  %@",userInfo[@"artist"],userInfo[@"album"]] withDetails:userInfo[@"title"] withLargeImage:@"swinsian"];
     }
 }
 - (void)trackStopped:(NSNotification *)myNotification {
     if (_dm.getStarted) {
         [_dm removePresence];
+    }
+}
+
+- (void)playerInfoChanged:(NSNotification *)theNotification
+{
+    NSDictionary *info = [theNotification userInfo];
+    
+    if ([(NSString *)info[@"Player State"] isEqualToString:@"Stopped"]) {
+        if (_dm.getStarted) {
+            [_dm removePresence];
+        }
+        return;
+    }
+    
+    if ([(NSString *)info[@"Player State"] isEqualToString:@"Playing"]) {
+        if (_dm.getStarted) {
+            [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes"];
+        }
+    }
+    
+    if ([(NSString *)info[@"Player State"] isEqualToString:@"Paused"]) {
+        if (_dm.getStarted) {
+            [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes"];
+        }
     }
 }
 @end
