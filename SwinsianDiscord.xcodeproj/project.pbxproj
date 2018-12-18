@@ -42,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F81257F321C945AE0011E1D2 /* SwinsianDiscord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwinsianDiscord.entitlements; sourceTree = "<group>"; };
 		F85BC43720D08E1E00C58BD9 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		F85BC43920D08E2C00C58BD9 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		F85D493D20D078D700343699 /* DiscordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscordManager.m; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		F87417F920D0750700614654 /* SwinsianDiscord */ = {
 			isa = PBXGroup;
 			children = (
+				F81257F321C945AE0011E1D2 /* SwinsianDiscord.entitlements */,
 				F85D494720D0838600343699 /* PFAboutWindow.xib */,
 				F85D494520D0838000343699 /* PFAboutWindowController.h */,
 				F85D494420D0837E00343699 /* PFAboutWindowController.m */,
@@ -157,6 +159,9 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
 							com.apple.Sandbox = {
 								enabled = 0;
 							};
@@ -335,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9HDZTER525;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iTunesDiscord",
@@ -354,6 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9HDZTER525;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iTunesDiscord",
