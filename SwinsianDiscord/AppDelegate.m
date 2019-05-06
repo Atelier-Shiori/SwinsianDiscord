@@ -157,7 +157,6 @@
     
     if ([(NSString *)info[@"Player State"] isEqualToString:@"Playing"]) {
         if (_dm.getStarted) {
-            NSLog(@"%@", info);
             [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes" withCurrentPosition:[self convertElaspedTimeToInterval:info[@"elapsedStr"]]];
         }
     }
