@@ -1,11 +1,13 @@
 # SwinsianDiscord
-![screnshot](https://i.imgur.com/8CS4PSL.png)
+![screnshot](https://malupdaterosx.moe/wp-content/uploads/2019/05/SwinsianDiscord.png)
 
 SwinsianDiscord is a simple menubar app for macOS that allows you to share what you are playing in Swinsian or iTunes in Discord via Rich Presence. [Swinsian](https://swinsian.com) is a Advanced Music Player for Mac.
 
 This program works on macOS El Capitan or later and requires Swinsian version >= 1.8.8 or Apple iTunes to work.
 
 The logo and the program name, Swinsian is owned by the respective owners.
+
+Like this app. You can support the development of this app and others on [Patreon](https://www.patreon.com/malupdaterosx)
 
 # To use
 1. Run the App

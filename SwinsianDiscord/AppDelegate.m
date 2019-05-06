@@ -101,7 +101,7 @@
     if (!_aboutWindowController) {
         _aboutWindowController = [PFAboutWindowController new];
     }
-    (self.aboutWindowController).appURL = [[NSURL alloc] initWithString:@"https://malupdaterosx.moe/hachidori/"];
+    (self.aboutWindowController).appURL = [[NSURL alloc] initWithString:@"https://malupdaterosx.moe/swinsiandiscord/"];
     NSMutableString *copyrightstr = [NSMutableString new];
     NSDictionary *bundleDict = [NSBundle mainBundle].infoDictionary;
     [copyrightstr appendFormat:@"%@",bundleDict[@"NSHumanReadableCopyright"]];
