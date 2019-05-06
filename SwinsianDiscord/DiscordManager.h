@@ -12,5 +12,6 @@
 - (void)startDiscordRPC;
 - (void)shutdownDiscordRPC;
 - (void)UpdatePresence:(NSString *)state withDetails:(NSString *)details withLargeImage:(NSString *)largeimage;
+- (void)UpdatePresence:(NSString *)state withDetails:(NSString *)details withLargeImage:(NSString *)largeimage withCurrentPosition:(float)currentPosition;
 - (void)removePresence;
 @end

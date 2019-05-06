@@ -126,7 +126,9 @@
 - (void)trackPlaying:(NSNotification *)myNotification {
     if (_dm.getStarted) {
         NSDictionary *userInfo = myNotification.userInfo;
-        [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",userInfo[@"artist"],userInfo[@"album"]] withDetails:userInfo[@"title"] withLargeImage:@"swinsian"];
+        NSNumber *currentTime = userInfo[@"currenttime"];
+        NSNumber *length = userInfo[@"length"];
+        [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",userInfo[@"artist"],userInfo[@"album"]] withDetails:userInfo[@"title"] withLargeImage:@"swinsian" withCurrentPosition:length.floatValue - currentTime.floatValue];
     }
     
 }
@@ -155,7 +157,8 @@
     
     if ([(NSString *)info[@"Player State"] isEqualToString:@"Playing"]) {
         if (_dm.getStarted) {
-            [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes"];
+            NSLog(@"%@", info);
+            [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes" withCurrentPosition:[self convertElaspedTimeToInterval:info[@"elapsedStr"]]];
         }
     }
     
@@ -164,5 +167,22 @@
             [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes"];
         }
     }
+}
+
+- (float)convertElaspedTimeToInterval:(NSString *)elapsed {
+    NSString *tmpstr = [elapsed stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    NSArray *intervals = [tmpstr componentsSeparatedByString:@":"];
+    if (intervals.count == 3) {
+        int hours = ((NSString *)intervals[0]).intValue;
+        int minutes = ((NSString *)intervals[1]).intValue;
+        int seconds = ((NSString *)intervals[2]).intValue;
+        return ((hours*60*60)+(minutes*60)+seconds);
+    }
+    else {
+        int minutes = ((NSString *)intervals[0]).intValue;
+        int seconds = ((NSString *)intervals[1]).intValue;
+        return ((minutes*60)+seconds);
+    }
+    return 0;
 }
 @end
