@@ -126,7 +126,7 @@
 - (void)trackPlaying:(NSNotification *)myNotification {
     if (_dm.getStarted) {
         NSDictionary *userInfo = myNotification.userInfo;
-        NSNumber *currentTime = userInfo[@"currenttime"];
+        NSNumber *currentTime = userInfo[@"currentTime"];
         NSNumber *length = userInfo[@"length"];
         [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",userInfo[@"artist"],userInfo[@"album"]] withDetails:userInfo[@"title"] withLargeImage:@"swinsian" withCurrentPosition:length.floatValue - currentTime.floatValue];
     }
