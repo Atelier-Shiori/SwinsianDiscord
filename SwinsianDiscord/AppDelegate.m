@@ -87,6 +87,18 @@
                selector:@selector(playerInfoChanged:)
                    name:@"com.apple.iTunes.playerInfo"
                  object:nil];
+    if (@available(macOS 10.5, *)) {
+        [center addObserver:self
+               selector:@selector(playerInfoChanged:)
+                   name:@"com.apple.Music.playerInfo"
+                 object:nil];
+    }
+    else {
+        [center addObserver:self
+        selector:@selector(playerInfoChanged:)
+            name:@"com.apple.iTunes.playerInfo"
+          object:nil];
+    }
 }
 
 
@@ -157,7 +169,12 @@
     
     if ([(NSString *)info[@"Player State"] isEqualToString:@"Playing"]) {
         if (_dm.getStarted) {
-            [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes" withCurrentPosition:[self convertElaspedTimeToInterval:info[@"elapsedStr"]]];
+            if (@available(macOS 10.5, *)) {
+                [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes" withCurrentPosition:0];
+            }
+            else {
+                [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes" withCurrentPosition:[self convertElaspedTimeToInterval:info[@"elapsedStr"]]];
+            }
         }
     }
     
