@@ -170,7 +170,9 @@
     if ([(NSString *)info[@"Player State"] isEqualToString:@"Playing"]) {
         if (_dm.getStarted) {
             if (@available(macOS 10.5, *)) {
-                [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes" withCurrentPosition:0];
+                float pos = [self getMusicPlayerPosition];
+                float duration = [self getMusicPlayerDuration];
+                [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes" withCurrentPosition:duration-pos];
             }
             else {
                 [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes" withCurrentPosition:[self convertElaspedTimeToInterval:info[@"elapsedStr"]]];
@@ -183,6 +185,42 @@
             [self.dm UpdatePresence:[NSString stringWithFormat:@"by %@ \n- %@",info[@"Artist"],info[@"Album"]] withDetails:info[@"Name"] withLargeImage:@"itunes"];
         }
     }
+}
+
+- (float)getMusicPlayerPosition {
+    return [self executeAppleScriot:@"tell application \"Music\" to get player position"].floatValue;
+}
+
+- (float)getMusicPlayerDuration {
+    return [self executeAppleScriot:@"tell application \"Music\" to get duration of current track"].floatValue;
+}
+
+- (NSString *)executeAppleScriot:(NSString *)command {
+    @try {
+        NSTask *task = [[NSTask alloc] init];
+        task.launchPath = @"/usr/bin/osascript";
+        task.arguments = @[@"-e", command];
+        NSPipe *pipe;
+        pipe = [NSPipe pipe];
+        task.standardOutput = pipe;
+        
+        NSFileHandle *file;
+        file = pipe.fileHandleForReading;
+        [task setEnvironment:@{@"LC_ALL" : @"en_US.UTF-8"}];
+        [task launch];
+        
+        NSData *data;
+        data = [file readDataToEndOfFile];
+        
+        NSString *string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+        if (string.length > 0) {
+            return string;
+        }
+    }
+    @catch (NSException *ex) {
+        return @"";
+    }
+    return @"";
 }
 
 - (float)convertElaspedTimeToInterval:(NSString *)elapsed {

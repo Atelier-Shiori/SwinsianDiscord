@@ -41,5 +41,7 @@
 	<string>https://updates.malupdaterosx.moe/swinsiandiscord/profileInfo.php</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>SwinsianDiscord uses Automation to retreive information about the current media you are playing.</string>
 </dict>
 </plist>

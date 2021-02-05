@@ -3,7 +3,7 @@
 
 SwinsianDiscord is a simple menubar app for macOS that allows you to share what you are playing in Swinsian or iTunes/Music App in Discord via Rich Presence. [Swinsian](https://swinsian.com) is a Advanced Music Player for Mac.
 
-This program works on macOS El Capitan or later and requires Swinsian version >= 1.8.8 or Apple iTunes to work. Music.app suppport requires macOS 10.15 Catalina, but it does not support elapsed time due to the app not providing that information.
+This program works on macOS El Capitan or later and requires Swinsian version >= 1.8.8 or Apple iTunes to work. Music.app suppport requires macOS 10.15 Catalina or later. This is Universal Binary 2 compatible.
 
 The logo and the program name, Swinsian is owned by the respective owners.
 
