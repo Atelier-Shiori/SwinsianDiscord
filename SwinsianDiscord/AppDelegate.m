@@ -40,7 +40,12 @@
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     
     //Allocates and loads the images into the application which will be used for our NSStatusItem
-    _statusImage = [NSImage imageNamed:@"menubaricon"];
+    if (@available(macOS 11.0, *)) {
+        _statusImage = [NSImage imageWithSystemSymbolName:@"music.note" accessibilityDescription:nil];
+    } else {
+        // Fallback on earlier versions
+        _statusImage = [NSImage imageNamed:@"menubaricon"];
+    }
     
     //Yosemite Dark Menu Support
     [_statusImage setTemplate:YES];
